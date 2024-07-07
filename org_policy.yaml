@@ -1,0 +1,20 @@
+constraints/compute.vmExternalIpAccess:
+  listPolicy:
+    allowedValues:
+    - projects/proud-curve-428712-m0/zones/us-west1-b/instances/vm-prod-primordial-groove
+constraints/iam.allowedPolicyMemberDomains:
+  listPolicy:
+    allowedValues:
+    - myuzo.ai
+constraints/iam.allowedPolicyMembers:
+  listPolicy:
+    allowedValues:
+    - user:neihouse@myuzo.ai
+constraints/resourcemanager.allowedExportDestinations:
+  listPolicy:
+    allowedValues:
+    - projects/proud-curve-428712-m0
+constraints/resourcemanager.allowedImportSources:
+  listPolicy:
+    allowedValues:
+    - projects/proud-curve-428712-m0

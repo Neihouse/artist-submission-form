@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Submission Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+<body>
+    <main>
+        <section class="form-section">
+            <h2 class="form-title fade-in">Artist Submission Form</h2>
+            <p class="form-description fade-in">If you're interested in playing our venue please complete the form.</p>
+            <form method="POST" action="/submit" class="artist-submission-form" hx-post="/submit" hx-trigger="submit" hx-swap="innerHTML">
+                <fieldset class="fade-in">
+                    <legend>Profile Sync</legend>
+                    <button type="button" class="spotify-sync-button">
+                        <img src="static/images/spotify/Spotify_Primary_Logo_RGB_Black.png" alt="Spotify Icon" class="spotify-icon">
+                        <span>Sync With Spotify Profile</span>
+                    </button>
+                </fieldset>
+                <fieldset class="fade-in">
+                    <legend>Basic Information</legend>
+                    <label for="band_name">Band/Artist Name</label>
+                    <input type="text" id="band_name" name="band_name" value="The Cure" class="input-field" required>
+                    <label for="photo">Photo</label>
+                    <input type="file" id="photo" name="photo" class="input-field" required>
+                    <label for="type">Type</label>
+                    <select id="type" name="type" class="input-field" required>
+                        <option value="original">Original</option>
+                        <option value="cover">Cover/Tribute</option>
+                    </select>
+                </fieldset>
+                <fieldset class="fade-in">
+                    <legend>Contact Information</legend>
+                    <label for="personal_name">Your Personal Name</label>
+                    <input type="text" id="personal_name" name="personal_name" value="John Doe" class="input-field" required>
+                    <label for="contact_email">Contact Email</label>
+                    <input type="email" id="contact_email" name="contact_email" value="info@email.com" class="input-field" required>
+                    <label for="phone_number">Phone Number</label>
+                    <input type="text" id="phone_number" name="phone_number" value="(555) 867-5309" class="input-field" required>
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website" value="www.website.com" class="input-field">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" value="Detroit, MI" class="input-field" required>
+                </fieldset>
+                <fieldset class="fade-in">
+                    <legend>Additional Information</legend>
+                    <label for="record_label">Record Label</label>
+                    <input type="text" id="record_label" name="record_label" value="e.g. Capitol" class="input-field">
+                    <label for="opening_for">I'd like to open for...</label>
+                    <input type="text" id="opening_for" name="opening_for" class="input-field">
+                    <label for="configuration">Configuration</label>
+                    <select id="configuration" name="configuration" class="input-field" required>
+                        <option value="solo">Solo</option>
+                        <option value="duo">Duo</option>
+                        <option value="full_band">Full Band</option>
+                    </select>
+                    <label for="genres">Genres</label>
+                    <input type="text" id="genres" name="genres" placeholder="Start typing to select your genre(s)" class="input-field" required>
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="5" placeholder="Tell us a little about you." class="input-field" required></textarea>
+                </fieldset>
+                <fieldset class="fade-in">
+                    <legend>Music Links</legend>
+                    <label for="spotify_link">Spotify</label>
+                    <input type="url" id="spotify_link" name="spotify_link" placeholder="Spotify" class="input-field">
+                    <label for="apple_music_link">Apple Music</label>
+                    <input type="url" id="apple_music_link" name="apple_music_link" placeholder="Apple Music" class="input-field">
+                    <label for="bandcamp_link">Bandcamp</label>
+                    <input type="url" id="bandcamp_link" name="bandcamp_link" placeholder="Bandcamp" class="input-field">
+                    <label for="soundcloud_link">Soundcloud</label>
+                    <input type="url" id="soundcloud_link" name="soundcloud_link" placeholder="Soundcloud" class="input-field">
+                </fieldset>
+                <fieldset class="fade-in">
+                    <legend>Social Links</legend>
+                    <label for="instagram_link">Instagram</label>
+                    <input type="url" id="instagram_link" name="instagram_link" placeholder="Instagram" class="input-field">
+                    <label for="facebook_link">Facebook</label>
+                    <input type="url" id="facebook_link" name="facebook_link" placeholder="Facebook" class="input-field">
+                    <label for="youtube_link">YouTube</label>
+                    <input type="url" id="youtube_link" name="youtube_link" placeholder="YouTube" class="input-field">
+                    <label for="tiktok_link">Tiktok</label>
+                    <input type="url" id="tiktok_link" name="tiktok_link" placeholder="Tiktok" class="input-field">
+                </fieldset>
+                <fieldset class="fade-in">
+                    <legend>Additional Message</legend>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Anything else we should know?" class="input-field"></textarea>
+                </fieldset>
+                <button type="submit" class="submit-button fade-in">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

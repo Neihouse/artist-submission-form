@@ -1,0 +1,4 @@
+constraint: constraints/compute.vmExternalIpAccess
+listPolicy:
+  allowedValues:
+  - projects/proud-curve-428712-m0/zones/us-west1-b/instances/vm-prod-primordial-groove

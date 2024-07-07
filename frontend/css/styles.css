@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundAnimation 10s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #f4f4f4, #e0e0e0); }
+    50% { background: linear-gradient(135deg, #e0e0e0, #f4f4f4); }
+    100% { background: linear-gradient(135deg, #f4f4f4, #e0e0e0); }
+}
+
+:root {
+    --primary-color: #FF5733;
+    --secondary-color: #C70039;
+    --accent-color: #1DB954;
+    --background-color: rgba(255, 255, 255, 0.9);
+    --border-color: #ccc;
+    --focus-border-color: #FF5733;
+    --font-color: #333;
+    --font-color-light: #666;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --hover-shadow-color: rgba(0, 0, 0, 0.3);
+    --border-radius: 12px;
+}
+
+.artist-submission-form {
+    background: var(--background-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    width: 100%;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+    animation: formAnimation 1s ease-in-out;
+}
+
+@keyframes formAnimation {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.form-title {
+    color: var(--font-color);
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-description {
+    color: var(--font-color-light);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: var(--focus-border-color);
+    outline: none;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.spotify-sync-button {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.spotify-sync-button:hover {
+    background-color: darken(var(--accent-color), 10%);
+    transform: scale(1.05);
+}
+
+.spotify-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
